@@ -45,14 +45,12 @@ The system uses image-based analysis to detect visible quality characteristics a
 - Git
 - GitHub
 
-## OpenAI vision configuration
+## Gemini Vision Configuration
 
-Food image analysis runs on the server with OpenAI's `gpt-4o-mini` vision model. Set
-`OPENAI_API_KEY` in a local `.env` file (copy `.env.example`) or as a server deployment
-environment variable. Never use a `VITE_` prefix for this secret. Restart the dev server
-after changing `.env`; the API key is not sent to the browser. For Cloudflare Workers,
-configure it as a Worker secret (for example, `npx wrangler secret put OPENAI_API_KEY`).
+Food image analysis runs on the server using Google's Gemini vision-capable AI model. Set `GEMINI_API_KEY` in a local `.env` file (copy `.env.example`) or as a server deployment environment variable.
 
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
 ---
 
 ## 📁 Project Structure
