@@ -5,6 +5,10 @@ An AI-powered Food Quality Detection System designed to analyze food images and 
 The system uses image-based analysis to detect visible quality characteristics and present the results through a simple and user-friendly interface.
 
 ---
+## 🌐 Live Demo
+
+👉 [**FoodVision AI – Live Website**](https://food-quality-detection-system.vercel.app/)
+
 
 ## 🚀 Features
 
