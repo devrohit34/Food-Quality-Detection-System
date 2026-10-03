@@ -1,0 +1,100 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Fredoka", system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-berry: var(--berry);
+  --color-tang: var(--tang);
+  --color-mint: var(--mint);
+  --color-sky: var(--sky);
+  --color-lav: var(--lav);
+  --color-lemon: var(--lemon);
+}
+
+:root {
+  --radius: 0.75rem;
+  --cream: oklch(0.966 0.044 87);
+  --ink: oklch(0.17 0.012 80);
+  --berry: oklch(0.66 0.23 10);
+  --tang: oklch(0.74 0.18 52);
+  --mint: oklch(0.74 0.17 158);
+  --sky: oklch(0.62 0.19 254);
+  --lav: oklch(0.6 0.22 293);
+  --lemon: oklch(0.88 0.18 95);
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: var(--cream);
+  --card-foreground: var(--ink);
+  --popover: var(--cream);
+  --popover-foreground: var(--ink);
+  --primary: var(--berry);
+  --primary-foreground: var(--cream);
+  --secondary: var(--mint);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.92 0.04 87);
+  --muted-foreground: oklch(0.17 0.012 80 / 0.65);
+  --accent: var(--lemon);
+  --accent-foreground: var(--ink);
+  --destructive: var(--berry);
+  --destructive-foreground: var(--cream);
+  --border: var(--ink);
+  --input: var(--ink);
+  --ring: var(--sky);
+}
+
+@utility pop {
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+}
+@utility pop-card {
+  border: 4px solid var(--ink);
+  border-radius: 2rem;
+  background: var(--cream);
+}
+@utility press {
+  transition: transform 0.15s ease;
+  &:hover {
+    transform: translateY(2px);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shadcn/ui components configuration",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "style": { "type": "string" },
+    "rsc": { "type": "boolean" },
+    "tsx": { "type": "boolean" },
+    "tailwind": {
+      "type": "object",
+      "properties": {
+        "config": { "type": "string" },
+        "css": { "type": "string" },
+        "baseColor": { "type": "string" },
+        "cssVariables": { "type": "boolean" },
+        "prefix": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "iconLibrary": { "type": "string" },
+    "rtl": { "type": "boolean" },
+    "aliases": {
+      "type": "object",
+      "properties": {
+        "components": { "type": "string" },
+        "utils": { "type": "string" },
+        "ui": { "type": "string" },
+        "lib": { "type": "string" },
+        "hooks": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "registries": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": ["style", "rsc", "tailwind", "aliases"],
+  "additionalProperties": true
+}
